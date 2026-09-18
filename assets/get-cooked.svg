@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-label="Cooking game pixel preview">
+  <rect width="480" height="300" fill="#07070b"/>
+  <rect x="48" y="70" width="384" height="170" fill="#171722" stroke="#f8f4e3" stroke-width="8"/>
+  <rect x="80" y="108" width="118" height="76" fill="#ffd84a"/>
+  <rect x="222" y="108" width="76" height="76" fill="#3fd7ff"/>
+  <rect x="322" y="108" width="78" height="76" fill="#73ff87"/>
+  <rect x="106" y="132" width="28" height="28" fill="#ff3157"/>
+  <rect x="246" y="132" width="28" height="28" fill="#f8f4e3"/>
+  <rect x="348" y="132" width="28" height="28" fill="#b48cff"/>
+  <rect x="80" y="202" width="320" height="12" fill="#f8f4e3"/>
+  <rect x="126" y="228" width="44" height="24" fill="#f8f4e3"/>
+  <rect x="310" y="228" width="44" height="24" fill="#f8f4e3"/>
+</svg>

@@ -1,0 +1,197 @@
+{
+  "identity": {
+    "name": "Mayank Verma",
+    "eyebrow": "Unity Developer",
+    "headline": "Gameplay programmer building polished Unity experiences across game systems, AR/XR, PlayFab, and interactive training.",
+    "role": "Unity Developer Intern",
+    "focus": "Gameplay, AR/XR, PlayFab",
+    "availability": "Available for new quests",
+    "location": "Delhi / Noida, India",
+    "email": "mayankvermacod@gmail.com",
+    "phone": "+91 7610278231",
+    "resume": "assets/MayankVerma_Resume.pdf",
+    "quote": "Be the change that you want to see in the world."
+  },
+  "dialogue": [
+    "Mayank joined the party: gameplay systems, AR/XR, PlayFab, and production UI are equipped.",
+    "I enjoy turning rough interaction ideas into reusable systems that feel clear, responsive, and satisfying.",
+    "Recent quests include a globe-scanning AR experience, a point-and-click detective game, and a fire safety VR simulation.",
+    "The next checkpoint is always a better player experience."
+  ],
+  "experience": [
+    {
+      "company": "Hapz Software Solutions",
+      "role": "Unity Developer Intern",
+      "location": "Noida, India",
+      "dates": "2026 | Completed internship",
+      "highlights": [
+        "Delivered production features across 2D games, AR, VR, PlayFab, localization, analytics, and onboarding systems.",
+        "Built and improved player-facing interaction, UI, tutorials, leaderboards, progression, and optimization workflows.",
+        "Created complete interactive projects from prototype to polished player experience."
+      ]
+    },
+    {
+      "company": "Nilee Games and Future Technologies",
+      "role": "Unity Developer Intern",
+      "location": "Remote",
+      "dates": "Apr. 2025 - Oct. 2025",
+      "highlights": [
+        "Developed educational game features with Unity and C#, covering gameplay, drag-and-drop interaction, physics, UI, and WebGL deployment.",
+        "Implemented multiplayer gameplay with Unity Netcode and collaborated with designers in agile production cycles."
+      ]
+    }
+  ],
+  "professionalWork": [
+    {
+      "order": 1,
+      "title": "Teleporto",
+      "type": "2D Puzzle Game",
+      "summary": "A polished 2D puzzle experience with player guidance, localized UI, and connected progression systems.",
+      "cover": "assets/media/T (1).png",
+      "video": "assets/media/Teleporto.mp4",
+      "gallery": ["assets/media/T (1).png", "assets/media/T (2).png"],
+      "stack": ["Unity", "PlayFab", "Google Auth", "Localization"],
+      "highlights": [
+        "Built the highlighting system and the complete player UI.",
+        "Implemented Google authentication, PlayFab integration, migration work, statistics, and leaderboards.",
+        "Created a tutorial system, supported localization, and delivered feedback-driven improvements."
+      ]
+    },
+    {
+      "order": 2,
+      "title": "AR Globe",
+      "type": "AR Education Experience",
+      "summary": "An augmented-reality globe explorer that recognizes a physical globe and turns countries into discoverable learning moments.",
+      "cover": "assets/media/AR (2).png",
+      "video": "assets/media/AR Globe.mp4",
+      "gallery": ["assets/media/AR (2).png", "assets/media/AR.png"],
+      "stack": ["Unity", "AR Foundation", "ARCore", "ARKit"],
+      "highlights": [
+        "Built the full project from scratch, from globe spawning to the final interaction flow.",
+        "Created country highlighting with meshes and outlines, plus the complete game UI.",
+        "Added country voice-over, satisfying globe rotation and movement, and performance optimization for faster use."
+      ]
+    },
+    {
+      "order": 3,
+      "title": "Emory Cole",
+      "type": "Point-and-Click Detective Game",
+      "summary": "A panoramic detective game inspired by classic point-and-click adventures, built around exploration, clues, and tactile puzzles.",
+      "cover": "assets/media/EC (3).png",
+      "video": "assets/media/Emory Cole.mp4",
+      "gallery": ["assets/media/EC (3).png", "assets/media/EC (2).png", "assets/media/EC.png"],
+      "stack": ["Unity", "Arcweave", "Puzzle Systems", "Editor Tooling"],
+      "highlights": [
+        "Built the project from scratch and created a tool for placing hotspots and nodes.",
+        "Implemented inventory, point-and-click interaction, panoramic rotation, UI, and object interactions.",
+        "Integrated Arcweave and built two puzzles: a key-block chest puzzle and a rotating cipher puzzle."
+      ]
+    },
+    {
+      "order": 4,
+      "title": "Earth Match",
+      "type": "Match-3 Mobile Game",
+      "summary": "A match-3 game improved through bug fixes, clearer onboarding, new power-ups, and performance-focused polish.",
+      "cover": "assets/media/EM (2).png",
+      "video": "assets/media/Earth Match.mp4",
+      "gallery": ["assets/media/EM (2).png", "assets/media/EM.png"],
+      "stack": ["Unity", "Mobile", "Tutorial Systems", "Optimization"],
+      "highlights": [
+        "Resolved gameplay bugs and improved the overall feel and reliability of the game.",
+        "Built a tutorial system to guide players through core mechanics.",
+        "Added new power-ups and optimized existing gameplay systems."
+      ]
+    },
+    {
+      "order": 5,
+      "title": "Fire and Safety VR",
+      "type": "Quest 3 Training Simulation",
+      "summary": "A guided VR fire-safety simulation that teaches users how to assess risk, navigate safely, and operate an extinguisher with the PASS method.",
+      "cover": "assets/media/VR (4).png",
+      "video": "assets/media/VR Fire and Safety.mp4",
+      "gallery": ["assets/media/VR (4).png", "assets/media/VR (3).png", "assets/media/VR (2).png", "assets/media/VR.png"],
+      "stack": ["Unity", "OpenXR", "Quest 3", "XR Interaction Toolkit"],
+      "highlights": [
+        "Built the full project from scratch in a Unity factory environment.",
+        "Created guided fire simulation, extinguisher interactions following PASS, multiple extinguisher behaviors, and world-responsive NPCs.",
+        "Implemented Quest 3 VR interactions, a waypoint system, instructional UI, alarm reactions, and scoring."
+      ]
+    }
+  ],
+  "games": [
+    {
+      "title": "The Office",
+      "status": "In development",
+      "summary": "A parody platformer about corporate work culture.",
+      "cover": "assets/the-office.svg",
+      "stack": ["Unity", "Platformer"],
+      "itchUrl": "https://mayjunejuly001.itch.io/the-office",
+      "embedUrl": "",
+      "gallery": [],
+      "highlights": ["Add the eventual WebGL embed URL here in content.json when it is ready."]
+    },
+    {
+      "title": "MayMander",
+      "status": "Prototype",
+      "summary": "A physics-driven spaceship experience.",
+      "cover": "assets/lunar-lander.svg",
+      "stack": ["Unity", "Physics"],
+      "itchUrl": "https://mayjunejuly001.itch.io/maymander",
+      "embedUrl": "",
+      "gallery": [],
+      "highlights": ["Add screenshots and a WebGL embed URL here when available."]
+    },
+    {
+      "title": "BubbleCore",
+      "status": "Prototype",
+      "summary": "A Godot shooter experiment.",
+      "cover": "assets/get-cooked.svg",
+      "stack": ["Godot", "Shooter"],
+      "itchUrl": "https://mayjunejuly001.itch.io/bubblecore",
+      "embedUrl": "",
+      "gallery": [],
+      "highlights": ["Add screenshots and a WebGL embed URL here when available."]
+    },
+    {
+      "title": "Tank Game",
+      "status": "Playable in browser",
+      "summary": "An endless tank game built around shooting mechanics.",
+      "cover": "assets/game-room.svg",
+      "stack": ["Unity", "Action"],
+      "itchUrl": "https://mayjunejuly001.itch.io/tank-game",
+      "embedUrl": "",
+      "gallery": [],
+      "highlights": ["Add the itch.io embed URL to play inside this portfolio."]
+    },
+    {
+      "title": "Helix Game",
+      "status": "Playable in browser",
+      "summary": "A browser-playable platformer experiment.",
+      "cover": "assets/lunar-lander.svg",
+      "stack": ["Unity", "Platformer"],
+      "itchUrl": "https://mayjunejuly001.itch.io/helix-game",
+      "embedUrl": "",
+      "gallery": [],
+      "highlights": ["Add the itch.io embed URL to play inside this portfolio."]
+    }
+  ],
+  "skills": {
+    "Programming": ["C#", "C++", "JavaScript", "Python", "SQL"],
+    "Game development": ["Unity 6", "URP", "Gameplay Programming", "Physics", "AI", "WebGL", "Cinemachine", "DOTween", "NavMesh", "Shader Graph"],
+    "AR / XR / Multiplayer": ["AR Foundation", "ARCore", "ARKit", "OpenXR", "XR Interaction Toolkit", "Photon Fusion", "Unity Netcode"],
+    "Backend and tools": ["PlayFab", "Authentication", "Cloud Save", "Leaderboards", "Runtime Localization", "Git", "Blender", "Aseprite", "Figma", "Jira"]
+  },
+  "links": [
+    {"label": "LinkedIn", "url": "https://www.linkedin.com/in/mayankverma001/", "kind": "contact"},
+    {"label": "GitHub", "url": "https://github.com/mayjunejuly006", "kind": "contact"},
+    {"label": "itch.io", "url": "https://mayjunejuly001.itch.io/", "kind": "contact"},
+    {"label": "YouTube", "url": "https://www.youtube.com/@mayjunejuly006", "kind": "creator"},
+    {"label": "Instagram", "url": "https://www.instagram.com/thevideogamemonkey/", "kind": "creator"}
+  ],
+  "contentCreation": {
+    "description": "I also share games, experiments, and game-development work through video and social content."
+  },
+  "contact": {
+    "formspreeEndpoint": "https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID"
+  }
+}

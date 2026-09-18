@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Mayank Verma - Unity developer portfolio featuring professional game, AR, and VR work.">
+    <title>Mayank Verma | Unity Developer</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <canvas id="star-canvas" aria-hidden="true"></canvas>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Mayank Verma home">
+        <span class="brand-mark" aria-hidden="true">MV</span>
+        <span data-bind="identity.name">Mayank Verma</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#experience">Experience</a>
+        <a href="#professional-work">Work</a>
+        <a href="#games">Games</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode" title="Toggle color theme">
+        <span class="theme-icon theme-sun" aria-hidden="true">&#9728;</span>
+        <span class="theme-icon theme-moon" aria-hidden="true">&#9790;</span>
+      </button>
+    </header>
+
+    <main id="main-content">
+      <section class="hero-section" id="home" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="kicker" data-bind="identity.eyebrow">Unity Developer</p>
+          <h1 id="hero-title" data-bind="identity.name">Mayank Verma</h1>
+          <p class="lead" data-bind="identity.headline"></p>
+          <div class="hero-actions" id="hero-actions"></div>
+        </div>
+        <aside class="status-panel" aria-label="Developer details" id="status-panel"></aside>
+      </section>
+
+      <section class="dialogue-section" aria-labelledby="dialogue-title">
+        <div class="dialogue-content">
+          <div class="dialogue-heading">
+            <p class="kicker">Developer note</p>
+          </div>
+          <h2 id="dialogue-title" class="sr-only">Developer note</h2>
+          <p id="dialogue-line" aria-live="polite"></p>
+        </div>
+        <button class="dialogue-next" type="button" id="next-dialogue" aria-label="Show next developer note" title="Next note">
+          <img src="assets/developer-note-emblem.png" alt="">
+        </button>
+      </section>
+
+      <section class="content-section timeline-section" id="experience" aria-labelledby="experience-title">
+        <div class="section-intro">
+          <p class="kicker">Experience</p>
+          <h2 id="experience-title">A timeline of shipped systems</h2>
+          <p>From gameplay mechanics to backend-connected AR and VR experiences.</p>
+        </div>
+        <div class="timeline" id="experience-list"></div>
+      </section>
+
+      <section class="content-section" id="professional-work" aria-labelledby="professional-title">
+        <div class="section-intro split-heading">
+          <div>
+            <p class="kicker">Professional work</p>
+            <h2 id="professional-title">Production projects</h2>
+          </div>
+          <p>Selected work from my completed internship. Open any project to watch the demo and browse screenshots.</p>
+        </div>
+        <div class="work-grid" id="professional-grid"></div>
+      </section>
+
+      <section class="content-section" id="games" aria-labelledby="games-title">
+        <div class="section-intro split-heading">
+          <div>
+            <p class="kicker">Personal games</p>
+            <h2 id="games-title">Playable experiments</h2>
+          </div>
+          <p>Personal Unity and Godot work hosted on itch.io. Future WebGL embeds are controlled from the same JSON file.</p>
+        </div>
+        <div class="game-grid" id="games-grid"></div>
+      </section>
+
+      <section class="content-section skills-section" id="skills" aria-labelledby="skills-title">
+        <div class="section-intro">
+          <p class="kicker">Skills</p>
+          <h2 id="skills-title">The build kit</h2>
+        </div>
+        <div class="skills-grid" id="skills-grid"></div>
+      </section>
+
+      <section class="content-section creator-section" id="creation" aria-labelledby="creation-title">
+        <div class="section-intro split-heading">
+          <div>
+            <p class="kicker">Content creation</p>
+            <h2 id="creation-title">Beyond the build</h2>
+          </div>
+          <p data-bind="contentCreation.description"></p>
+        </div>
+        <div class="creator-links" id="creator-links"></div>
+      </section>
+
+      <section class="content-section contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="contact-copy">
+          <p class="kicker">Contact</p>
+          <h2 id="contact-title">Build something memorable</h2>
+          <p>Have a game, interactive experience, or collaboration in mind? Send me a message.</p>
+          <div class="contact-links" id="contact-links"></div>
+        </div>
+        <form id="contact-form" class="contact-form" method="POST" novalidate>
+          <label>
+            <span>Name</span>
+            <input name="name" type="text" autocomplete="name" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input name="email" type="email" autocomplete="email" required>
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button class="button primary" type="submit">Send message</button>
+          <p class="form-status" id="form-status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title">
+      <button class="dialog-close" id="dialog-close" type="button" aria-label="Close project details">Close</button>
+      <div id="dialog-content"></div>
+    </dialog>
+
+    <footer>
+      <span data-bind="identity.quote"></span>
+      <span data-bind="identity.name"></span>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
