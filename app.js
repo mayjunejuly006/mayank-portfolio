@@ -12,6 +12,8 @@ const fallbackContent = {
     email: "mayankvermacod@gmail.com",
     phone: "+91 7610278231",
     resume: "assets/MayankVerma_Resume.pdf",
+    logo: "assets/logo.jpg",
+    favicon: "assets/favicon.png",
     quote: "Be the change that you want to see in the world."
   },
   dialogue: [
@@ -309,6 +311,22 @@ function setBoundText() {
 function renderHero() {
   const status = byId("status-panel");
   status.replaceChildren();
+
+  const badge = element("div", "status-badge");
+  const avatar = document.createElement("img");
+  avatar.className = "status-badge-img";
+  avatar.src = portfolio.identity.logo || "assets/logo.jpg";
+  avatar.alt = `${portfolio.identity.name} logo`;
+  avatar.width = 50;
+  avatar.height = 50;
+  avatar.loading = "lazy";
+
+  const badgeMeta = element("div", "status-badge-info");
+  const badgeName = element("p", "status-badge-name", portfolio.identity.name);
+  const badgeLevel = element("p", "status-badge-level", "LV 20 // READY");
+  badgeMeta.append(badgeName, badgeLevel);
+  badge.append(avatar, badgeMeta);
+
   const title = element("p", "status-title", "SAVE FILE 01");
   const state = element("span", "status-state", "READY");
   title.append(state);
@@ -333,7 +351,7 @@ function renderHero() {
     row.append(element("dt", "", label), dd);
     list.append(row);
   });
-  status.append(title, list);
+  status.append(badge, title, list);
 
   const actions = byId("hero-actions");
   actions.replaceChildren(
