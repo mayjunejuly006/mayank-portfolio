@@ -181,6 +181,11 @@ h3 { margin-bottom: 8px; font-size: 1.2rem; line-height: 1.2; }
 .hud-cert-link { color: var(--save-gold); text-decoration: underline; text-underline-offset: 3px; font-weight: 700; transition: color .15s ease, text-decoration-color .15s ease; }
 .hud-cert-link:hover { color: var(--undertale-orange); text-decoration-color: var(--undertale-orange); }
 
+.status-links { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--line-soft); flex-wrap: wrap; }
+.status-link-circle { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: var(--surface-strong); border: 1.5px solid var(--line-soft); color: var(--muted); box-shadow: 2px 2px 0 var(--shadow); transition: transform .18s cubic-bezier(.2,.8,.2,1), color .15s ease, border-color .15s ease, background .15s ease, box-shadow .18s ease; text-decoration: none; flex-shrink: 0; }
+.status-link-circle:hover { color: var(--save-gold); border-color: var(--undertale-orange); background: color-mix(in srgb, var(--purple) 22%, var(--surface-strong)); transform: translateY(-3px) scale(1.08); box-shadow: 4px 4px 0 var(--shadow); }
+.status-link-circle svg { width: 16px; height: 16px; display: block; }
+
 .dialogue-section { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; align-items: stretch; margin-bottom: 112px; padding: 26px 84px 26px 26px; background: #000; border: 4px solid var(--line); border-radius: 0; box-shadow: 8px 8px 0 var(--shadow); cursor: pointer; transition: border-color .15s ease, box-shadow .15s ease; }
 .dialogue-section:hover { border-color: var(--save-gold); box-shadow: 10px 10px 0 var(--shadow); }
 .dialogue-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }

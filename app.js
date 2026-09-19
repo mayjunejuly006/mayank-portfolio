@@ -309,6 +309,44 @@ function setBoundText() {
   document.title = `${portfolio.identity.name} | ${portfolio.identity.role || "Junior Unity Developer"}`;
 }
 
+function getPlatformIcon(label) {
+  const l = (label || "").toLowerCase();
+  if (l.includes("linkedin")) {
+    return `<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+    </svg>`;
+  }
+  if (l.includes("github")) {
+    return `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+    </svg>`;
+  }
+  if (l.includes("itch")) {
+    return `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M2.5 4.5a2 2 0 0 0-2 2v9a4 4 0 0 0 4 4h.5a2.5 2.5 0 0 0 2.5-2.5v-.5h9v.5a2.5 2.5 0 0 0 2.5 2.5h.5a4 4 0 0 0 4-4v-9a2 2 0 0 0-2-2h-19zm5.5 3a1 1 0 0 1 1 1v1h1a1 1 0 1 1 0 2h-1v1a1 1 0 1 1-2 0v-1h-1a1 1 0 0 1 0-2h1v-1a1 1 0 0 1 1-1zm7.5 1a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zm2.5 2a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/>
+    </svg>`;
+  }
+  if (l.includes("youtube")) {
+    return `<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+    </svg>`;
+  }
+  if (l.includes("instagram")) {
+    return `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+    </svg>`;
+  }
+  if (l.includes("email") || l.includes("mail")) {
+    return `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+      <polyline points="22,6 12,13 2,6"></polyline>
+    </svg>`;
+  }
+  return `<span aria-hidden="true">🔗</span>`;
+}
+
 function renderHero() {
   const status = byId("status-panel");
   status.replaceChildren();
@@ -356,7 +394,25 @@ function renderHero() {
     row.append(element("dt", "", label), dd);
     list.append(row);
   });
-  status.append(badge, title, list);
+
+  const platformLinks = element("div", "status-links");
+  platformLinks.setAttribute("aria-label", "Platform profiles");
+
+  const linksToRender = [
+    ...(portfolio.links || []),
+    ...(portfolio.identity.email ? [{ label: "Email", url: `mailto:${portfolio.identity.email}` }] : [])
+  ];
+
+  linksToRender.forEach((link) => {
+    const a = externalLink("", link.url, "status-link-circle");
+    a.innerHTML = getPlatformIcon(link.label);
+    a.title = `${link.label} (${portfolio.identity.name})`;
+    a.setAttribute("aria-label", link.label);
+    a.addEventListener("mouseenter", () => RetroAudio.menuBlip());
+    platformLinks.append(a);
+  });
+
+  status.append(badge, title, list, platformLinks);
 
   const actions = byId("hero-actions");
   actions.replaceChildren(
