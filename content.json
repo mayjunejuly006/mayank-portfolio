@@ -1,10 +1,12 @@
 {
   "identity": {
     "name": "Mayank Verma",
-    "eyebrow": "Unity Developer",
-    "headline": "Gameplay programmer building polished Unity experiences across game systems, AR/XR, PlayFab, and interactive training.",
-    "role": "Unity Developer Intern",
-    "focus": "Gameplay, AR/XR, PlayFab",
+    "eyebrow": "Game & Unity Developer",
+    "headline": "Junior Unity Developer building gameplay mechanics, AR/VR experiences, PlayFab cloud integrations, and interactive Unity projects.",
+    "role": "Unity Developer",
+    "certification": "Unity Certified Associate: Game Developer",
+    "certificationUrl": "https://www.credly.com/badges/0579c099-e34f-4c74-a5a1-331111efb068/public_url",
+    "focus": "Gameplay, AR/VR, PlayFab, Multiplayer",
     "availability": "Available for new quests",
     "location": "Delhi / Noida, India",
     "email": "mayankvermacod@gmail.com",
@@ -13,31 +15,34 @@
     "quote": "Be the change that you want to see in the world."
   },
   "dialogue": [
-    "Mayank joined the party: gameplay systems, AR/XR, PlayFab, and production UI are equipped.",
-    "I enjoy turning rough interaction ideas into reusable systems that feel clear, responsive, and satisfying.",
-    "Recent quests include a globe-scanning AR experience, a point-and-click detective game, and a fire safety VR simulation.",
-    "The next checkpoint is always a better player experience."
+    "Finished my Unity Developer Internship with experience in mobile, WebGL, AR, and VR projects at Hapz Software Solutions.",
+    "I enjoy making games, playing games, and talking about game design you can catch me livestreaming on my YouTube channel and making fun videos on Instagram!",
+    "I got hands on XP with Unity, Godot, Adobe Tools, and Creative Creation skills to build games and connect them to with my audience.",
+    "Always building and learning—experimenting with everything from 2D platformers and 3D racing prototypes to multiplayer and XR/VR/AR.",
+    "The thought of building great games fills you with DETERMINATION."
   ],
   "experience": [
     {
-      "company": "Hapz Software Solutions",
-      "role": "Unity Developer Intern",
+      "company": "Hapz Software Solutions Pvt. Ltd.",
+      "role": "Junior Unity Developer",
       "location": "Noida, India",
-      "dates": "2026 | Completed internship",
+      "dates": "Feb. 2026 – Sep. 2026",
       "highlights": [
-        "Delivered production features across 2D games, AR, VR, PlayFab, localization, analytics, and onboarding systems.",
-        "Built and improved player-facing interaction, UI, tutorials, leaderboards, progression, and optimization workflows.",
-        "Created complete interactive projects from prototype to polished player experience."
+        "Built gameplay systems and interactive UI using C#, ScriptableObjects, and state machines across commercial Unity applications.",
+        "Integrated PlayFab for player authentication (Google, Facebook, Guest), cloud saves, leaderboards, and runtime localization.",
+        "Developed interactive AR and VR experiences using AR Foundation and Meta Quest (XR Interaction Toolkit) for training simulations.",
+        "Learned multiplayer networking fundamentals with Photon Fusion and Unity Netcode, building prototypes for player sync and lobbies.",
+        "Created custom Unity Editor utilities and debugging tools to simplify daily workflows and asset setups."
       ]
     },
     {
       "company": "Nilee Games and Future Technologies",
       "role": "Unity Developer Intern",
       "location": "Remote",
-      "dates": "Apr. 2025 - Oct. 2025",
+      "dates": "Apr. 2025 – Oct. 2025",
       "highlights": [
-        "Developed educational game features with Unity and C#, covering gameplay, drag-and-drop interaction, physics, UI, and WebGL deployment.",
-        "Implemented multiplayer gameplay with Unity Netcode and collaborated with designers in agile production cycles."
+        "Developed 4 educational games in Unity and C#, implementing drag-and-drop mechanics, physics interactions, UI, and WebGL builds.",
+        "Collaborated with designers in agile sprints, resolved gameplay bugs, and explored multiplayer mechanics with Unity Netcode."
       ]
     }
   ],
@@ -120,66 +125,68 @@
   ],
   "games": [
     {
+      "title": "GetCooked 3D",
+      "status": "Simulation Prototype",
+      "summary": "A 3D cooking simulation prototype built from scratch with clean software architecture and state machines.",
+      "cover": "assets/get-cooked.svg",
+      "stack": ["Unity 6", "URP", "C#", "ScriptableObjects", "State Machines"],
+      "itchUrl": "https://mayjunejuly001.itch.io/",
+      "embedUrl": "",
+      "gallery": [],
+      "highlights": [
+        "Engineered player movement, interaction systems, recipe management, object handling, and delivery mechanics.",
+        "Designed reusable architecture using ScriptableObjects, C# Events, Interfaces, State Machines, and modular UI with input rebinding."
+      ]
+    },
+    {
       "title": "The Office",
-      "status": "In development",
-      "summary": "A parody platformer about corporate work culture.",
+      "status": "2D Platformer",
+      "summary": "A complete 2D platformer featuring physics-based movement, enemy AI, combat mechanics, and pathfinding.",
       "cover": "assets/the-office.svg",
-      "stack": ["Unity", "Platformer"],
+      "stack": ["Unity", "C#", "Platformer", "Enemy AI"],
       "itchUrl": "https://mayjunejuly001.itch.io/the-office",
       "embedUrl": "",
       "gallery": [],
-      "highlights": ["Add the eventual WebGL embed URL here in content.json when it is ready."]
+      "highlights": [
+        "Developed end-to-end featuring physics movement, enemy AI, pathfinding, and combat mechanics.",
+        "Implemented modular gameplay systems with animation state management, debugging tools, and performance optimization."
+      ]
     },
     {
-      "title": "MayMander",
-      "status": "Prototype",
-      "summary": "A physics-driven spaceship experience.",
+      "title": "Lunar Lander 2D",
+      "status": "Physics Landing Game",
+      "summary": "A 2D physics-based landing game featuring procedural gameplay systems, fuel management, and Cinemachine effects.",
       "cover": "assets/lunar-lander.svg",
-      "stack": ["Unity", "Physics"],
+      "stack": ["Unity 6", "C#", "Physics 2D", "Cinemachine"],
       "itchUrl": "https://mayjunejuly001.itch.io/maymander",
       "embedUrl": "",
       "gallery": [],
-      "highlights": ["Add screenshots and a WebGL embed URL here when available."]
+      "highlights": [
+        "Developed procedural gameplay systems, fuel management, collectibles, scoring, checkpoints, and modular architecture.",
+        "Implemented Cinemachine camera effects, UI, particle systems, audio, and level progression."
+      ]
     },
     {
       "title": "BubbleCore",
-      "status": "Prototype",
-      "summary": "A Godot shooter experiment.",
-      "cover": "assets/get-cooked.svg",
-      "stack": ["Godot", "Shooter"],
+      "status": "Godot Prototype",
+      "summary": "An arcade shooter experiment exploring projectile physics and rapid input responsiveness.",
+      "cover": "assets/game-room.svg",
+      "stack": ["Godot", "Shooter", "Arcade"],
       "itchUrl": "https://mayjunejuly001.itch.io/bubblecore",
       "embedUrl": "",
       "gallery": [],
-      "highlights": ["Add screenshots and a WebGL embed URL here when available."]
-    },
-    {
-      "title": "Tank Game",
-      "status": "Playable in browser",
-      "summary": "An endless tank game built around shooting mechanics.",
-      "cover": "assets/game-room.svg",
-      "stack": ["Unity", "Action"],
-      "itchUrl": "https://mayjunejuly001.itch.io/tank-game",
-      "embedUrl": "",
-      "gallery": [],
-      "highlights": ["Add the itch.io embed URL to play inside this portfolio."]
-    },
-    {
-      "title": "Helix Game",
-      "status": "Playable in browser",
-      "summary": "A browser-playable platformer experiment.",
-      "cover": "assets/lunar-lander.svg",
-      "stack": ["Unity", "Platformer"],
-      "itchUrl": "https://mayjunejuly001.itch.io/helix-game",
-      "embedUrl": "",
-      "gallery": [],
-      "highlights": ["Add the itch.io embed URL to play inside this portfolio."]
+      "highlights": [
+        "Fast-paced arcade experiment testing bullet trajectory calculations and state handling."
+      ]
     }
   ],
   "skills": {
     "Programming": ["C#", "C++", "JavaScript", "Python", "SQL"],
     "Game development": ["Unity 6", "URP", "Gameplay Programming", "Physics", "AI", "WebGL", "Cinemachine", "DOTween", "NavMesh", "Shader Graph"],
-    "AR / XR / Multiplayer": ["AR Foundation", "ARCore", "ARKit", "OpenXR", "XR Interaction Toolkit", "Photon Fusion", "Unity Netcode"],
-    "Backend and tools": ["PlayFab", "Authentication", "Cloud Save", "Leaderboards", "Runtime Localization", "Git", "Blender", "Aseprite", "Figma", "Jira"]
+    "Architecture & Patterns": ["ScriptableObjects", "State Machines (FSM)", "Event Systems", "Interfaces", "Modular UI"],
+    "AR / VR & Multiplayer": ["AR Foundation", "ARCore / ARKit", "OpenXR", "XR Interaction Toolkit", "Meta Quest", "Photon Fusion", "Unity Netcode"],
+    "Backend and tools": ["PlayFab", "REST APIs", "Authentication", "Cloud Save", "Leaderboards", "Runtime Localization", "Git", "Plastic SCM", "Rider", "Jira", "Blender", "Aseprite"],
+    "Certifications": ["Unity Certified Associate: Game Developer"]
   },
   "links": [
     {"label": "LinkedIn", "url": "https://www.linkedin.com/in/mayankverma001/", "kind": "contact"},
@@ -189,7 +196,7 @@
     {"label": "Instagram", "url": "https://www.instagram.com/thevideogamemonkey/", "kind": "creator"}
   ],
   "contentCreation": {
-    "description": "I also share games, experiments, and game-development work through video and social content."
+    "description": "I also share games, dev experiments, and game-development deconstructions through YouTube livestreams and social content."
   },
   "contact": {
     "formspreeEndpoint": "https://formspree.io/f/xrpbbwle"

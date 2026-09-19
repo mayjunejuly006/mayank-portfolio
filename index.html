@@ -22,10 +22,49 @@
         <a href="#games">Games</a>
         <a href="#contact">Contact</a>
       </nav>
-      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode" title="Toggle color theme">
-        <span class="theme-icon theme-sun" aria-hidden="true">&#9728;</span>
-        <span class="theme-icon theme-moon" aria-hidden="true">&#9790;</span>
-      </button>
+      <div class="header-controls" role="group" aria-label="Audio and theme controls">
+        <button class="music-toggle" id="music-toggle" type="button" aria-label="Play background music" title="Toggle background music (BGM)">
+          <svg class="ctrl-icon icon-music-on" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 18V5l12-2v13"></path>
+            <circle cx="6" cy="18" r="3"></circle>
+            <circle cx="18" cy="16" r="3"></circle>
+          </svg>
+          <svg class="ctrl-icon icon-music-off" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 18V5l12-2v13"></path>
+            <circle cx="6" cy="18" r="3"></circle>
+            <circle cx="18" cy="16" r="3"></circle>
+            <line x1="2" y1="2" x2="22" y2="22"></line>
+          </svg>
+        </button>
+        <button class="sfx-toggle active" id="sfx-toggle" type="button" aria-label="Mute sound effects" title="Toggle sound effects (SFX)">
+          <svg class="ctrl-icon icon-sfx-on" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+          </svg>
+          <svg class="ctrl-icon icon-sfx-off" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+          </svg>
+        </button>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode" title="Toggle color theme">
+          <svg class="ctrl-icon theme-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="ctrl-icon theme-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
     </header>
 
     <main id="main-content">
@@ -39,7 +78,7 @@
         <aside class="status-panel" aria-label="Developer details" id="status-panel"></aside>
       </section>
 
-      <section class="dialogue-section" aria-labelledby="dialogue-title">
+      <section class="dialogue-section" id="dialogue-box" aria-labelledby="dialogue-title">
         <div class="dialogue-content">
           <div class="dialogue-heading">
             <p class="kicker">Developer note</p>
@@ -67,7 +106,13 @@
             <p class="kicker">Professional work</p>
             <h2 id="professional-title">Production projects</h2>
           </div>
-          <p>Selected work from my completed internship. Open any project to watch the demo and browse screenshots.</p>
+          <p>Commercial applications and production projects developed across mobile, WebGL, AR, and VR. Open any project to watch the demo and browse technical highlights.</p>
+        </div>
+        <div class="filter-bar" id="project-filters" role="group" aria-label="Filter projects">
+          <button class="filter-btn active" type="button" data-filter="all"><span class="filter-soul" aria-hidden="true">♥</span> ALL</button>
+          <button class="filter-btn" type="button" data-filter="ar-vr"><span class="filter-soul" aria-hidden="true">♥</span> AR / VR</button>
+          <button class="filter-btn" type="button" data-filter="gameplay"><span class="filter-soul" aria-hidden="true">♥</span> GAMEPLAY</button>
+          <button class="filter-btn" type="button" data-filter="tools"><span class="filter-soul" aria-hidden="true">♥</span> TOOLS &amp; SERVICES</button>
         </div>
         <div class="work-grid" id="professional-grid"></div>
       </section>
@@ -103,28 +148,68 @@
       </section>
 
       <section class="content-section contact-section" id="contact" aria-labelledby="contact-title">
-        <div class="contact-copy">
-          <p class="kicker">Contact</p>
-          <h2 id="contact-title">Build something memorable</h2>
-          <p>Have a game, interactive experience, or collaboration in mind? Send me a message.</p>
-          <div class="contact-links" id="contact-links"></div>
+        <div class="contact-encounter-frame">
+          <div class="encounter-header-bar">
+            <div class="encounter-stats-row">
+              <span class="encounter-name">MAYANK VERMA</span>
+              <span class="encounter-lv">LV 20</span>
+              <span class="encounter-hp">HP 99/99</span>
+              <span class="encounter-exp">EXP 9999</span>
+            </div>
+            <p class="encounter-flavor-text">* A wild collaboration opportunity appeared! What will you do?</p>
+          </div>
+
+          <div class="encounter-body-grid">
+            <div class="encounter-info-card">
+              <p class="kicker">Direct Transmission</p>
+              <h2 id="contact-title">Build something memorable</h2>
+              <p class="encounter-desc">Have an indie game mechanic to bring alive, an interactive AR/VR quest, or a full-time role? Send a message and let's craft an unforgettable player experience.</p>
+              
+              <div class="encounter-quest-traits">
+                <div class="quest-trait-row">
+                  <span class="trait-bullet">♥</span>
+                  <span class="trait-label">BASE:</span>
+                  <span class="trait-val" data-bind="identity.location">Delhi / Noida, India</span>
+                </div>
+                <div class="quest-trait-row">
+                  <span class="trait-bullet">♥</span>
+                  <span class="trait-label">SPEC:</span>
+                  <span class="trait-val" data-bind="identity.focus">Gameplay, AR/VR, PlayFab, Multiplayer</span>
+                </div>
+                <div class="quest-trait-row">
+                  <span class="trait-bullet">♥</span>
+                  <span class="trait-label">STATUS:</span>
+                  <span class="trait-val" data-bind="identity.availability">Available for new quests</span>
+                </div>
+              </div>
+
+              <div class="encounter-direct-actions" id="contact-links"></div>
+            </div>
+
+            <form id="contact-form" class="contact-form encounter-form" method="POST" novalidate>
+              <div class="form-mode-banner">
+                <span class="mode-tag">[ ACT // DISPATCH MESSAGE ]</span>
+                <span class="mode-soul" aria-hidden="true">♥</span>
+              </div>
+              <label>
+                <span>[ PLAYER NAME ]</span>
+                <input name="name" type="text" placeholder="Your name or studio..." autocomplete="name" required>
+              </label>
+              <label>
+                <span>[ RETURN EMAIL ]</span>
+                <input name="email" type="email" placeholder="your.email@domain.com" autocomplete="email" required>
+              </label>
+              <label>
+                <span>[ QUEST BRIEF / MESSAGE ]</span>
+                <textarea name="message" rows="5" placeholder="Describe your game idea, collaboration, or opportunity..." required></textarea>
+              </label>
+              <button class="button primary encounter-submit-btn" type="submit">
+                <span>DISPATCH MESSAGE</span>
+              </button>
+              <p class="form-status" id="form-status" aria-live="polite"></p>
+            </form>
+          </div>
         </div>
-        <form id="contact-form" class="contact-form" method="POST" novalidate>
-          <label>
-            <span>Name</span>
-            <input name="name" type="text" autocomplete="name" required>
-          </label>
-          <label>
-            <span>Email</span>
-            <input name="email" type="email" autocomplete="email" required>
-          </label>
-          <label>
-            <span>Message</span>
-            <textarea name="message" rows="5" required></textarea>
-          </label>
-          <button class="button primary" type="submit">Send message</button>
-          <p class="form-status" id="form-status" aria-live="polite"></p>
-        </form>
       </section>
     </main>
 
@@ -132,6 +217,13 @@
       <button class="dialog-close" id="dialog-close" type="button" aria-label="Close project details">Close</button>
       <div id="dialog-content"></div>
     </dialog>
+
+    <button class="save-point-btn" id="save-point-btn" type="button" aria-label="Determination Save Point: return to top" title="Determination Save Point (Return to top)">
+      <span class="save-star" aria-hidden="true">✦</span>
+      <span class="save-text">SAVE POINT</span>
+    </button>
+
+    <aside class="retro-toast" id="retro-toast" role="status" aria-live="polite" aria-hidden="true"></aside>
 
     <footer>
       <span data-bind="identity.quote"></span>
