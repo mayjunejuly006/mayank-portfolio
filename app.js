@@ -424,8 +424,19 @@ function renderHero() {
 /* ==========================================================================
    Typewriter Dialogue Box with Sans Voice & Fast-Forward QoL
    ========================================================================== */
+function setDialogueInstant(line) {
+  const target = byId("dialogue-line");
+  if (!target) return;
+  window.clearTimeout(typingTimer);
+  const formatted = line.startsWith("* ") ? line : `* ${line}`;
+  currentFullLine = formatted;
+  target.textContent = formatted;
+  isTyping = false;
+}
+
 function typeDialogue(line) {
   const target = byId("dialogue-line");
+  if (!target) return;
   window.clearTimeout(typingTimer);
   const formatted = line.startsWith("* ") ? line : `* ${line}`;
   currentFullLine = formatted;
@@ -465,6 +476,7 @@ function typeDialogue(line) {
 }
 
 function handleDialogueClick() {
+  RetroAudio.ensureContext();
   if (isTyping) {
     window.clearTimeout(typingTimer);
     byId("dialogue-line").textContent = currentFullLine;
@@ -475,9 +487,13 @@ function handleDialogueClick() {
   }
 }
 
-function showDialogue(nextIndex) {
+function showDialogue(nextIndex, instant = false) {
   dialogueIndex = (nextIndex + portfolio.dialogue.length) % portfolio.dialogue.length;
-  typeDialogue(portfolio.dialogue[dialogueIndex]);
+  if (instant) {
+    setDialogueInstant(portfolio.dialogue[dialogueIndex]);
+  } else {
+    typeDialogue(portfolio.dialogue[dialogueIndex]);
+  }
 }
 
 function renderExperience() {
@@ -1189,7 +1205,10 @@ function init() {
   } else {
     byId("next-dialogue")?.addEventListener("click", handleDialogueClick);
   }
-  showDialogue(0);
+
+  // On first landing of the user, load all text at once so the user can read it immediately
+  // and understand where the retro voice sound comes from when they tap on the dialogue box.
+  showDialogue(0, true);
 }
 
 fetch("content.json")
