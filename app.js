@@ -7,7 +7,8 @@ const fallbackContent = {
     certification: "Unity Certified Associate: Game Developer",
     certificationUrl: "https://www.credly.com/badges/0579c099-e34f-4c74-a5a1-331111efb068/public_url",
     focus: "Gameplay, AR/VR, PlayFab, Multiplayer",
-    availability: "Available for new quests",
+    level: "LV 23",
+    availability: "Open to Full-Time Roles",
     location: "Delhi / Noida, India",
     email: "mayankvermacod@gmail.com",
     phone: "+91 7610278231",
@@ -323,12 +324,12 @@ function renderHero() {
 
   const badgeMeta = element("div", "status-badge-info");
   const badgeName = element("p", "status-badge-name", portfolio.identity.name);
-  const badgeLevel = element("p", "status-badge-level", "LV 20 // READY");
+  const badgeLevel = element("p", "status-badge-level", `${portfolio.identity.level || "LV 23"} // READY`);
   badgeMeta.append(badgeName, badgeLevel);
   badge.append(avatar, badgeMeta);
 
-  const title = element("p", "status-title", "SAVE FILE 01");
-  const state = element("span", "status-state", "READY");
+  const title = element("p", "status-title", "SAVE FILE 02");
+  const state = element("span", "status-state", "SAVED");
   title.append(state);
   const list = element("dl", "status-list");
   const rows = [
@@ -336,12 +337,16 @@ function renderHero() {
     ["Credential", portfolio.identity.certification || "Unity Certified Associate: Game Developer"],
     ["Base", portfolio.identity.location || "Delhi / Noida, India"],
     ["Focus", portfolio.identity.focus || "Gameplay, AR/VR, PlayFab, Multiplayer"],
-    ["Status", portfolio.identity.availability || "Available for new quests"]
+    ["Status", portfolio.identity.availability || "Open to Full-Time Roles"]
   ];
   rows.forEach(([label, value]) => {
     const row = element("div");
     const dd = element("dd");
-    if (label === "Credential" && portfolio.identity.certificationUrl) {
+    if (label === "Status") {
+      const dot = element("span", "status-dot");
+      dot.setAttribute("aria-hidden", "true");
+      dd.append(dot, document.createTextNode(value));
+    } else if (label === "Credential" && portfolio.identity.certificationUrl) {
       const link = externalLink(`${value} ↗`, portfolio.identity.certificationUrl, "hud-cert-link");
       link.title = "Verify official Unity Certified Associate credential on Credly";
       dd.append(link);
@@ -458,6 +463,49 @@ function getProjectCategory(project) {
   return categories.join(" ");
 }
 
+function getProjectRetroIcon(title) {
+  const t = (title || "").toLowerCase();
+  if (t.includes("teleporto")) {
+    return `<svg class="retro-icon" width="38" height="28" viewBox="0 0 38 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <ellipse cx="9" cy="14" rx="6" ry="11" stroke="#00f0ff"/>
+      <ellipse cx="29" cy="14" rx="6" ry="11" stroke="#ff9d00"/>
+      <path d="M15 14h8m-3-3l3 3-3 3" stroke="#ffff00"/>
+    </svg>`;
+  }
+  if (t.includes("globe")) {
+    return `<svg class="retro-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="16" cy="16" r="12" stroke="#00f0ff"/>
+      <ellipse cx="16" cy="16" rx="5.5" ry="12" stroke="#8a5cf6"/>
+      <line x1="4" y1="16" x2="28" y2="16" stroke="#00f0ff"/>
+      <circle cx="23" cy="10" r="1.8" fill="#ffff00" stroke="none"/>
+    </svg>`;
+  }
+  if (t.includes("emory") || t.includes("detective")) {
+    return `<svg class="retro-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="13" cy="13" r="8" stroke="#ffff00"/>
+      <line x1="19" y1="19" x2="28" y2="28" stroke="#ff9d00" stroke-width="3"/>
+      <path d="M10 13h6m-3-3v6" stroke="#8a5cf6"/>
+    </svg>`;
+  }
+  if (t.includes("earth") || t.includes("match")) {
+    return `<svg class="retro-icon" width="36" height="30" viewBox="0 0 36 30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polygon points="18,2 24,11 18,20 12,11" stroke="#ff2a4b" fill="none"/>
+      <polygon points="7,9 12,17 7,25 2,17" stroke="#00f0ff" fill="none"/>
+      <polygon points="29,9 34,17 29,25 24,17" stroke="#ffff00" fill="none"/>
+    </svg>`;
+  }
+  if (t.includes("vr") || t.includes("fire")) {
+    return `<svg class="retro-icon" width="36" height="26" viewBox="0 0 36 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <rect x="4" y="5" width="28" height="16" rx="4" stroke="#8a5cf6"/>
+      <line x1="18" y1="5" x2="18" y2="21" stroke="#00f0ff"/>
+      <circle cx="11" cy="13" r="3" stroke="#00f0ff"/>
+      <circle cx="25" cy="13" r="3" stroke="#ff9d00"/>
+      <path d="M1 11h3m28 0h3" stroke="#8a5cf6"/>
+    </svg>`;
+  }
+  return `<span class="retro-soul-glyph" aria-hidden="true">♥</span>`;
+}
+
 function renderProfessionalWork() {
   const root = byId("professional-grid");
   root.replaceChildren();
@@ -469,16 +517,27 @@ function renderProfessionalWork() {
     const image = document.createElement("img");
     image.className = "project-cover";
     image.src = project.cover;
-    image.alt = `${project.title} screenshot`;
+    image.alt = `${project.title} gameplay screenshot`;
     image.loading = "lazy";
 
-    const mask = element("div", "project-mask");
-    mask.setAttribute("aria-hidden", "true");
-    mask.append(
-      element("span", "mask-symbol", "//"),
-      element("span", "mask-title", project.title),
-      element("span", "mask-index", `0${project.order || 1}`)
-    );
+    const retroCover = element("div", "project-retro-cover");
+    retroCover.setAttribute("aria-hidden", "true");
+    retroCover.innerHTML = `
+      <div class="retro-cover-top">
+        <span class="retro-cover-cart">CART // 0${project.order || 1}</span>
+        <span class="retro-cover-soul">♥</span>
+      </div>
+      <div class="retro-cover-body">
+        <div class="retro-cover-glyph">${getProjectRetroIcon(project.title)}</div>
+        <h4 class="retro-cover-title">${project.title}</h4>
+        <p class="retro-cover-type">${project.type}</p>
+      </div>
+      <div class="retro-cover-bot">
+        <span class="retro-cover-prompt">[ ▶ HOVER TO REVEAL ]</span>
+      </div>
+    `;
+
+    media.append(image, retroCover);
 
     const body = element("div", "project-body");
     body.append(element("p", "project-type", project.type));
@@ -491,8 +550,8 @@ function renderProfessionalWork() {
     open.addEventListener("click", () => openProject(project));
     body.append(open);
 
-    media.append(image, mask);
     card.append(media, body);
+    card.addEventListener("mouseenter", () => RetroAudio.menuBlip());
     root.append(card);
   });
 }

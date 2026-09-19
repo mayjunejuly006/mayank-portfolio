@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Fire and Safety VR retro abstract training simulation art">
+  <defs>
+    <radialGradient id="vr-bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#2c0c08"/>
+      <stop offset="100%" stop-color="#080302"/>
+    </radialGradient>
+    <filter id="vr-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="640" height="360" fill="url(#vr-bg)"/>
+
+  <!-- Hazard Caution Stripes Bottom -->
+  <g transform="translate(0, 332)">
+    <rect width="640" height="28" fill="#1c1917"/>
+    <path d="M0 28 L28 0 M40 28 L68 0 M80 28 L108 0 M120 28 L148 0 M160 28 L188 0 M200 28 L228 0 M240 28 L268 0 M280 28 L308 0 M320 28 L348 0 M360 28 L388 0 M400 28 L428 0 M440 28 L468 0 M480 28 L508 0 M520 28 L548 0 M560 28 L588 0 M600 28 L628 0" stroke="#facc15" stroke-width="14"/>
+  </g>
+
+  <!-- Spatial VR Waypoint Grid & Rings -->
+  <ellipse cx="320" cy="270" rx="200" ry="50" fill="none" stroke="#f97316" stroke-width="2" stroke-dasharray="10 8" opacity="0.4"/>
+  <ellipse cx="320" cy="270" rx="130" ry="32" fill="none" stroke="#00e5ff" stroke-width="2" stroke-dasharray="6 6" opacity="0.6"/>
+
+  <!-- Geometric Abstract Flames (Right Side) -->
+  <g transform="translate(420, 240)">
+    <!-- Outer Flame -->
+    <polygon points="0,0 -40,-80 -20,-130 10,-170 40,-120 70,-80 30,-20" fill="#ef4444" opacity="0.75" filter="url(#vr-glow)"/>
+    <!-- Mid Flame -->
+    <polygon points="5,-5 -25,-60 -10,-105 15,-135 35,-95 45,-55 20,-15" fill="#f97316" filter="url(#vr-glow)"/>
+    <!-- Core Flame -->
+    <polygon points="8,-5 -10,-40 0,-75 18,-95 28,-65 25,-35 12,-10" fill="#ffeb3b"/>
+  </g>
+
+  <!-- Extinguisher Spray Vector Particles (Left to Right) -->
+  <g stroke="#00e5ff" stroke-width="3" stroke-linecap="round" opacity="0.85" filter="url(#vr-glow)">
+    <line x1="220" y1="185" x2="380" y2="155"/>
+    <line x1="220" y1="195" x2="395" y2="180"/>
+    <line x1="220" y1="205" x2="385" y2="210"/>
+    <circle cx="400" cy="165" r="4" fill="#ffffff"/>
+    <circle cx="410" cy="190" r="5" fill="#ffffff"/>
+    <circle cx="395" cy="205" r="3" fill="#ffffff"/>
+  </g>
+
+  <!-- Meta Quest 3 Wireframe VR Headset -->
+  <g transform="translate(190, 190)">
+    <!-- Headset Visor -->
+    <rect x="-60" y="-35" width="120" height="70" rx="16" fill="#18181b" stroke="#ffffff" stroke-width="3"/>
+    <rect x="-52" y="-27" width="104" height="54" rx="10" fill="#09090b" stroke="#00e5ff" stroke-width="2"/>
+    <!-- Quest 3 Sensor Cameras (Triple Pill) -->
+    <circle cx="-24" cy="0" r="6" fill="#18181b" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="0" cy="0" r="6" fill="#18181b" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="24" cy="0" r="6" fill="#18181b" stroke="#ffffff" stroke-width="2"/>
+    <!-- Headband Straps -->
+    <path d="M-60 -10 Q-90 -12 -110 0" stroke="#71717a" stroke-width="5" fill="none"/>
+    <path d="M60 -10 Q90 -12 110 0" stroke="#71717a" stroke-width="5" fill="none"/>
+    <!-- VR Spatial Beacon -->
+    <circle cx="0" cy="-55" r="8" fill="#00e5ff" filter="url(#vr-glow)"/>
+    <line x1="0" y1="-35" x2="0" y2="-47" stroke="#00e5ff" stroke-width="2" stroke-dasharray="3 3"/>
+  </g>
+
+  <!-- HUD Reticle Elements -->
+  <text x="50" y="55" font-family="'Courier New', monospace" font-size="12" fill="#f97316" letter-spacing="2">META QUEST 3 // VR TRAINING // OPENXR</text>
+  <text x="590" y="55" font-family="'Courier New', monospace" font-size="12" fill="#facc15" text-anchor="end" letter-spacing="2">PASS PROTOCOL: PULL // AIM // SQUEEZE // SWEEP</text>
+</svg>

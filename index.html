@@ -154,7 +154,7 @@
           <div class="encounter-header-bar">
             <div class="encounter-stats-row">
               <span class="encounter-name">MAYANK VERMA</span>
-              <span class="encounter-lv">LV 20</span>
+              <span class="encounter-lv" data-bind="identity.level">LV 23</span>
               <span class="encounter-hp">HP 99/99</span>
               <span class="encounter-exp">EXP 9999</span>
             </div>
@@ -181,7 +181,7 @@
                 <div class="quest-trait-row">
                   <span class="trait-bullet">♥</span>
                   <span class="trait-label">STATUS:</span>
-                  <span class="trait-val" data-bind="identity.availability">Available for new quests</span>
+                  <span class="trait-val"><span class="status-dot" aria-hidden="true"></span><span data-bind="identity.availability">Open to Full-Time Roles</span></span>
                 </div>
               </div>
 
