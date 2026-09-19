@@ -16,7 +16,7 @@ const fallbackContent = {
   skills: {},
   links: [],
   contentCreation: { description: "" },
-  contact: { formspreeEndpoint: "" }
+  contact: { formspreeEndpoint: "https://formspree.io/f/xrpbbwle" }
 };
 
 let portfolio = fallbackContent;
