@@ -370,6 +370,7 @@ body.motion-ready .reveal.is-visible { opacity: 1; transform: translateY(0); }
   .brand { grid-column: 1; grid-row: 1; }
   .header-controls { grid-column: 2; grid-row: 1; justify-self: end; }
   .site-nav { grid-column: 1 / -1; grid-row: 2; width: fit-content; max-width: 100%; justify-self: center; justify-content: center; }
+  .site-nav a { padding: 5px 9px; font-size: .72rem; }
   .hero-section, .contact-section { grid-template-columns: 1fr; min-height: auto; }
   .hero-section { padding: 76px 0 64px; }
   .work-grid, .game-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
