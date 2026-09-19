@@ -2,12 +2,12 @@ const fallbackContent = {
   identity: {
     name: "Mayank Verma",
     eyebrow: "Game & Unity Developer",
-    headline: "Junior Unity Developer building gameplay mechanics, AR/VR experiences, PlayFab cloud integrations, and interactive Unity projects.",
-    role: "Junior Unity Developer",
+    headline: "Unity developer — mobile, WebGL, AR and VR. ~1 year shipping production apps at Hapz Software Solutions.",
+    role: "Unity Developer",
     certification: "Unity Certified Associate: Game Developer",
     certificationUrl: "https://www.credly.com/badges/0579c099-e34f-4c74-a5a1-331111efb068/public_url",
     focus: "Gameplay, AR/VR, PlayFab, Multiplayer",
-    level: "LV 23",
+    level: "",
     availability: "Open to Full-Time Roles",
     location: "Delhi / Noida, India",
     email: "mayankvermacod@gmail.com",
@@ -362,7 +362,8 @@ function renderHero() {
 
   const badgeMeta = element("div", "status-badge-info");
   const badgeName = element("p", "status-badge-name", portfolio.identity.name);
-  const badgeLevel = element("p", "status-badge-level", `${portfolio.identity.level || "LV 23"} // READY`);
+  const levelText = portfolio.identity.level || "";
+  const badgeLevel = element("p", "status-badge-level", levelText ? `${levelText} // READY` : "READY FOR NEW QUEST");
   badgeMeta.append(badgeName, badgeLevel);
   badge.append(avatar, badgeMeta);
 
@@ -371,7 +372,7 @@ function renderHero() {
   title.append(state);
   const list = element("dl", "status-list");
   const rows = [
-    ["Role", portfolio.identity.role || "Junior Unity Developer"],
+    ["Role", portfolio.identity.role || "Unity Developer"],
     ["Credential", portfolio.identity.certification || "Unity Certified Associate: Game Developer"],
     ["Base", portfolio.identity.location || "Delhi / Noida, India"],
     ["Focus", portfolio.identity.focus || "Gameplay, AR/VR, PlayFab, Multiplayer"],
@@ -415,9 +416,19 @@ function renderHero() {
   status.append(badge, title, list, platformLinks);
 
   const actions = byId("hero-actions");
+  // Hero meta line: location + availability surfaced above the fold
+  const heroMeta = element("p", "hero-meta");
+  const locSpan = element("span", "hero-meta-base", `📍 ${portfolio.identity.location || "Delhi / Noida, India"}`);
+  const divider = element("span", "hero-meta-divider", "  ·  ");
+  const statusDot = element("span", "status-dot");
+  statusDot.setAttribute("aria-hidden", "true");
+  const availSpan = element("span", "hero-meta-status");
+  availSpan.append(statusDot, document.createTextNode(portfolio.identity.availability || "Open to Full-Time Roles"));
+  heroMeta.append(locSpan, divider, availSpan);
   actions.replaceChildren(
+    heroMeta,
     externalLink("View professional work", "#professional-work", "button primary"),
-    externalLink("Download resume", portfolio.identity.resume, "button")
+    externalLink("Download CV", portfolio.identity.resume, "button")
   );
 }
 

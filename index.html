@@ -4,6 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Mayank Verma - Unity developer portfolio featuring professional game, AR, and VR work.">
+    <meta property="og:title" content="Mayank Verma | Unity Developer">
+    <meta property="og:description" content="Unity developer — mobile, WebGL, AR and VR. ~1 year shipping production apps at Hapz Software Solutions. Unity Certified Associate.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mayank-portfolio-seven-beta.vercel.app/">
+    <meta property="og:image" content="https://mayank-portfolio-seven-beta.vercel.app/assets/logo.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mayank Verma | Unity Developer">
+    <meta name="twitter:description" content="Unity developer — mobile, WebGL, AR and VR. ~1 year shipping production apps at Hapz Software Solutions.">
+    <meta name="twitter:image" content="https://mayank-portfolio-seven-beta.vercel.app/assets/logo.jpg">
     <title>Mayank Verma | Unity Developer</title>
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="apple-touch-icon" href="assets/favicon.png">
@@ -19,10 +28,12 @@
         <span data-bind="identity.name">Mayank Verma</span>
       </a>
       <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#experience">Experience</a>
         <a href="#professional-work">Work</a>
         <a href="#games">Games</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
+        <a href="assets/MayankVerma_Resume.pdf" download>Resume ↓</a>
       </nav>
       <div class="header-controls" role="group" aria-label="Audio and theme controls">
         <button class="music-toggle" id="music-toggle" type="button" aria-label="Play background music" title="Toggle background music (BGM)">
@@ -87,20 +98,11 @@
             <span class="dialogue-hint" aria-hidden="true">[Tap box to cycle ▶]</span>
           </div>
           <h2 id="dialogue-title" class="sr-only">Developer note</h2>
-          <p id="dialogue-line" aria-live="polite">* Finished my Unity Developer Internship with experience in mobile, WebGL, AR, and VR projects at Hapz Software Solutions.</p>
+          <p id="dialogue-line" aria-live="polite">* Unity developer — mobile, WebGL, AR and VR. ~1 year shipping production apps at Hapz Software Solutions.</p>
         </div>
         <button class="dialogue-next" type="button" id="next-dialogue" aria-label="Show next developer note" title="Next note">
           <img src="assets/developer-note-emblem.png" alt="">
         </button>
-      </section>
-
-      <section class="content-section timeline-section" id="experience" aria-labelledby="experience-title">
-        <div class="section-intro">
-          <p class="kicker">Experience</p>
-          <h2 id="experience-title">A timeline of shipped systems</h2>
-          <p>From gameplay mechanics to backend-connected AR and VR experiences.</p>
-        </div>
-        <div class="timeline" id="experience-list"></div>
       </section>
 
       <section class="content-section" id="professional-work" aria-labelledby="professional-title">
@@ -126,9 +128,18 @@
             <p class="kicker">Personal games</p>
             <h2 id="games-title">Playable experiments</h2>
           </div>
-          <p>Personal Unity and Godot work hosted on itch.io. Future WebGL embeds are controlled from the same JSON file.</p>
+          <p>Personal Unity and Godot builds hosted on itch.io — side projects and game jams built for fun and craft.</p>
         </div>
         <div class="game-grid" id="games-grid"></div>
+      </section>
+
+      <section class="content-section timeline-section" id="experience" aria-labelledby="experience-title">
+        <div class="section-intro">
+          <p class="kicker">Experience</p>
+          <h2 id="experience-title">A timeline of shipped systems</h2>
+          <p>From gameplay mechanics to backend-connected AR and VR experiences.</p>
+        </div>
+        <div class="timeline" id="experience-list"></div>
       </section>
 
       <section class="content-section skills-section" id="skills" aria-labelledby="skills-title">
@@ -155,7 +166,7 @@
           <div class="encounter-header-bar">
             <div class="encounter-stats-row">
               <span class="encounter-name">MAYANK VERMA</span>
-              <span class="encounter-lv" data-bind="identity.level">LV 23</span>
+              <span class="encounter-lv">XP: ~1 YR</span>
               <span class="encounter-hp">HP 99/99</span>
               <span class="encounter-exp">EXP 9999</span>
             </div>
@@ -166,7 +177,7 @@
             <div class="encounter-info-card">
               <p class="kicker">Direct Transmission</p>
               <h2 id="contact-title">Build something memorable</h2>
-              <p class="encounter-desc">Have an indie game mechanic to bring alive, an interactive AR/VR quest, or a full-time role? Send a message and let's craft an unforgettable player experience.</p>
+              <p class="encounter-desc">Got a game idea to build, an AR/VR project, or a full-time role? Let's talk.</p>
               
               <div class="encounter-quest-traits">
                 <div class="quest-trait-row">
@@ -183,6 +194,11 @@
                   <span class="trait-bullet">♥</span>
                   <span class="trait-label">STATUS:</span>
                   <span class="trait-val"><span class="status-dot" aria-hidden="true"></span><span data-bind="identity.availability">Open to Full-Time Roles</span></span>
+                </div>
+                <div class="quest-trait-row">
+                  <span class="trait-bullet">♥</span>
+                  <span class="trait-label">EMAIL:</span>
+                  <span class="trait-val"><a href="mailto:mayankvermacod@gmail.com" class="plain-email-link">mayankvermacod@gmail.com</a></span>
                 </div>
               </div>
 
