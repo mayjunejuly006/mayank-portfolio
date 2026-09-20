@@ -188,8 +188,8 @@
     }
   ],
   "skills": {
-    "Programming": ["C#", "C++", "JavaScript", "Python", "SQL"],
-    "Game development": ["Unity 6", "URP", "Gameplay Programming", "Physics", "AI", "WebGL", "Cinemachine", "DOTween", "NavMesh", "Shader Graph"],
+    "Programming": ["C# (primary)", "Python", "SQL"],
+    "Game development": ["Unity 6", "Godot", "URP", "Gameplay Programming", "Physics", "AI", "WebGL", "Cinemachine", "DOTween", "NavMesh", "Shader Graph"],
     "Architecture & Patterns": ["ScriptableObjects", "State Machines (FSM)", "Event Systems", "Interfaces", "Modular UI"],
     "AR / VR & Multiplayer": ["AR Foundation", "ARCore / ARKit", "OpenXR", "XR Interaction Toolkit", "Meta Quest", "Photon Fusion", "Unity Netcode"],
     "Backend and tools": ["PlayFab", "REST APIs", "Authentication", "Cloud Save", "Leaderboards", "Runtime Localization", "Git", "Plastic SCM", "Rider", "Jira", "Blender", "Aseprite"],
