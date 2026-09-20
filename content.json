@@ -45,8 +45,8 @@
       "location": "Remote",
       "dates": "Apr. 2025 – Oct. 2025",
       "highlights": [
-        "Developed 4 educational games in Unity and C#, implementing drag-and-drop mechanics, physics interactions, UI, and WebGL builds.",
-        "Collaborated with designers in agile sprints, resolved gameplay bugs, and explored multiplayer mechanics with Unity Netcode."
+        "Shipped 4 educational games for a Montessori children's learning platform (NDA) — titles covered number counting, multiplication, and board-game-style mechanics, built in Unity and C# with WebGL deployment.",
+        "Collaborated in agile sprints with game designers, resolved gameplay bugs, and prototyped multiplayer mechanics using Unity Netcode."
       ]
     }
   ],
