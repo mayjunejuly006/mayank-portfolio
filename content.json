@@ -154,14 +154,14 @@
       "gallery": [],
       "highlights": [
         "Base: Code Monkey's Lunar Lander course (fuel management, scoring pads, Cinemachine camera, particle effects, audio, level progression).",
-        "Extended: refactored into a modular architecture with separated concerns beyond the course structure.",
-        "Added [YOUR EXTENSION] — fill in what you changed or added beyond the tutorial."
+        "Simple addition: persistent high-score system saved across sessions with PlayerPrefs.",
+        "Intermediate addition: procedural asteroid obstacle spawner with difficulty scaling across levels; refactored codebase into a modular separated-concern architecture beyond the tutorial."
       ]
     },
     {
       "title": "GetCooked 3D",
       "status": "Simulation · Extended from course",
-      "summary": "Extended from Code Monkey's Kitchen Chaos course — took the tutorial base and rebuilt the data layer with ScriptableObjects, C# Events, and runtime input rebinding not present in the course.",
+      "summary": "Extended from Code Monkey's Kitchen Chaos course — rebuilt the data layer with a ScriptableObject-driven recipe system, pause/settings screen, and runtime input rebinding not present in the course.",
       "cover": "assets/get-cooked.svg",
       "stack": ["Unity 6", "URP", "C#", "ScriptableObjects", "State Machines"],
       "itchUrl": "https://mayjunejuly001.itch.io/",
@@ -169,8 +169,8 @@
       "gallery": [],
       "highlights": [
         "Base: Code Monkey's Kitchen Chaos course (object pickup, recipe logic, order delivery, counter interactions).",
-        "Extended: redesigned the data layer using ScriptableObjects and C# Events for decoupled, reusable recipe and ingredient systems.",
-        "Added runtime input rebinding and [YOUR EXTENSION] — fill in anything else you built beyond the course."
+        "Simple addition: pause menu and settings screen with master volume and SFX controls.",
+        "Intermediate addition: replaced hardcoded recipe logic with a fully data-driven ScriptableObject recipe database + C# Events, and added runtime input rebinding."
       ]
     },
     {
