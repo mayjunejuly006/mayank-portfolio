@@ -758,6 +758,10 @@ function renderSkills() {
         container.append(tag);
       });
       section.append(element("h3", "", group), container);
+      if (portfolio.identity.certificationProgram) {
+        const prog = element("p", "cert-program-line", portfolio.identity.certificationProgram);
+        section.append(prog);
+      }
     } else {
       section.append(element("h3", "", group), renderTags(skills));
     }

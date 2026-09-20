@@ -268,6 +268,7 @@ h3 { margin-bottom: 8px; font-size: 1.2rem; line-height: 1.2; }
 .skill-group h3 { color: var(--save-gold); font-family: var(--font-display); }
 .cert-tag-link { text-decoration: none; color: var(--save-gold); border: 1.5px solid var(--save-gold); background: color-mix(in srgb, var(--save-gold) 15%, transparent); font-weight: 700; cursor: pointer; transition: all .15s ease; }
 .cert-tag-link:hover { color: #fff; border-color: var(--undertale-orange); background: var(--undertale-orange); transform: translateY(-2px); box-shadow: 3px 3px 0 var(--shadow); }
+.cert-program-line { margin: 10px 0 0; color: var(--muted); font-family: var(--font-mono); font-size: .74rem; line-height: 1.5; }
 .creator-links { display: flex; flex-wrap: wrap; gap: 14px; }
 .creator-link { display: inline-flex; min-width: 200px; min-height: 80px; align-items: center; gap: 14px; padding: 14px 20px; color: var(--ink); background: var(--surface); border: 2px solid var(--line-soft); border-radius: 0; font-family: var(--font-mono); font-size: 1.05rem; font-weight: 700; text-decoration: none; box-shadow: 4px 4px 0 var(--shadow); transition: transform .2s cubic-bezier(.2,.8,.2,1), border-color .15s ease, color .15s ease, box-shadow .15s ease; }
 .creator-link:hover { color: var(--save-gold); border-color: var(--undertale-orange); box-shadow: 7px 7px 0 var(--shadow); transform: translate(-3px, -3px); }
